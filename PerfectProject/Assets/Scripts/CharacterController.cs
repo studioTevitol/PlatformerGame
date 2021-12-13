@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     Animator animator; 
     Rigidbody2D rb;
     bool canJump = true;
+    public bool doubleJump;
     bool faceRight = true;
 
     private void Start()
@@ -51,7 +52,8 @@ public class CharacterController : MonoBehaviour
     {
         if (col.transform.CompareTag("Platform"))
         {
-            canJump = true;
+            canJump = true;                
+            doubleJump = true;
             animator.SetBool("isJumping",false);
         }
     }
@@ -63,6 +65,16 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("isJumping",true);
             rb.AddForce(Vector2.up * (jumpSpeed * 2));
             canJump = false;
+        } 
+        
+        
+        
+        else if (doubleJump == true)
+        {
+            animator.SetBool("isJumping",true);
+            rb.AddForce(Vector2.up * (jumpSpeed * 2));
+            canJump = false;
+            doubleJump = false;
         }
     }
 
