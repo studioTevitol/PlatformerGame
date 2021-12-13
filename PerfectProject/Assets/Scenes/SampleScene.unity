@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 963326503}
-  offset: {x: 0.05, y: 0.04, z: -5}
-  damping: 0.02
+  offset: {x: 0.2, y: 0.2, z: -5}
+  damping: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

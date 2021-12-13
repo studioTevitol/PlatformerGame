@@ -12,7 +12,6 @@ public class CharacterController : MonoBehaviour
     Rigidbody2D rb;
     bool canJump = true;
     public bool doubleJump;
-    bool faceRight = true;
 
     private void Start()
     {
